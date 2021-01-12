@@ -1,3 +1,43 @@
+# Visual E2E Testing
+
+## Getting Started
+
+* Get Your Screener Account Here
+
+* Run `npm init -y`
+
+* Add the following dependencies to packages.json
+
+```js
+  "devDependencies": {
+    "@wdio/cli": "^6.9.0",
+    "@wdio/jasmine-framework": "^6.8.0",
+    "@wdio/local-runner": "^6.9.0",
+    "@wdio/mocha-framework": "^6.8.0",
+    "@wdio/sauce-service": "^6.8.0",
+    "@wdio/spec-reporter": "^6.8.1",
+    "@wdio/sync": "^6.9.0",
+    "chromedriver": "^87.0.0",
+    "wdio-chromedriver-service": "^6.0.4"
+  }
+```
+* `npm i`
+
+* Create visual.spec.js that looks like this
+
+```js
+describe('Home page', () => {
+    it('should look correct visually', () => {
+        browser.url('https://react-redux.realworld.io/#/?_k=j18a5u');
+        browser.execute('/*@visual.init*/', 'React Redux');
+        browser.execute('/*@visual.snapshot*/', 'Global Feed');
+    });
+});
+```
+
+* Create a visual.conf.js that looks like this
+
+```js
 const sauceOptions = {
     username: process.env.SAUCE_USERNAME,
     accesskey: process.env.SAUCE_ACCESS_KEY
@@ -53,3 +93,14 @@ exports.config = {
         }
     ]
 };
+```
+
+* Point the scripts to the config in package.json
+
+```js
+  "scripts": {
+    "test": "npx wdio test/visual.conf.js"
+  },
+```
+
+* `npm test`
