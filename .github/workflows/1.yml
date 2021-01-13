@@ -23,9 +23,10 @@ jobs:
           node-version: 12.x
       - name: Install dependencies
         run: npm i
-      - name: Run Sauce Pipeline Test
+      - name: Run Tests
         run: |
-          ./saucectl run -c ./.sauce/config.yml
+          cd ci-pipeline
+          saucectl run
         env:
           BUILD_ID: ${{ github.run_id }}
           BUILD_ENV: GitHub Actions
