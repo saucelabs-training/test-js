@@ -1,0 +1,31 @@
+name: CI Pipeline Tests
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+env:
+  SAUCE_ACCESS_KEY: ${{secrets.SAUCE_ACCESS_KEY}}
+  SAUCE_USERNAME: ${{secrets.SAUCE_USERNAME}}
+
+jobs:
+  cypress:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - name: Install dependencies
+        run: npm i
+      - name: Run Sauce Pipeline Test
+        run: |
+          ./saucectl run -c ./.sauce/config.yml
+        env:
+          BUILD_ID: ${{ github.run_id }}
+          BUILD_ENV: GitHub Actions
