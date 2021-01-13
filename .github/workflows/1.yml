@@ -22,7 +22,9 @@ jobs:
         with:
           node-version: 12.x
       - name: Install dependencies
-        run: npm i
+        run: |
+          npm i -g saucectl
+          npm i
       - name: Run Tests
         run: |
           cd ci-pipeline
