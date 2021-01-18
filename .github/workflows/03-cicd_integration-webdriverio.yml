@@ -2,7 +2,7 @@
 name: CI/CD Integration - WebdriverIO
 on: [push, pull_request]
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
         - name: Checkout
@@ -10,11 +10,11 @@ jobs:
         - name: Install
           uses: ianwalter/puppeteer-container@v4.0.0
           with:
-            args: cd ./solutions/02_Setup/webdriverio && npm install
+            args: "cd ./solutions/02_Setup/webdriverio && npm install"
         - name: Test
           uses: ianwalter/puppeteer-container@v4.0.0
           with:
-            args: cd ./solutions/02_Setup/webdriverio && npm run test
+            args: "cd ./solutions/02_Setup/webdriverio && npm run test"
         - uses: actions/upload-artifact@v1
           if: failure()
           with:
