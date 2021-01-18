@@ -7,8 +7,8 @@ jobs:
     steps:
         - name: Checkout
           uses: actions/checkout@v2
+        - uses: ianwalter/puppeteer-container@v4.0.0
         - name: Run
-          uses: ianwalter/puppeteer-container@v4.0.0
           run: |
             cd ./solutions/02_Setup/webdriverio
             npm install
