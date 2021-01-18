@@ -1,5 +1,5 @@
 
-name: CI/CD Integration - WebdriverIO
+name: CI/CD Integration - Cypress
 on: [push, pull_request]
 jobs:
   test:
@@ -10,7 +10,7 @@ jobs:
         - uses: actions/setup-node@v1
           with:
             node-version: 14.x
-        - name: Install dependencies
+        - name: Install dependencies and run
           run: |
             cd ./solutions/02_Setup/cypress
             npm i
