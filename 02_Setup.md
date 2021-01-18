@@ -12,7 +12,7 @@ Then follow the chapter of the framework you would like to use. The objective of
 
 1. Have a simple test suite setup that runs a test to
 1. open [https://react-redux.realworld.io/#/login](https://react-redux.realworld.io/#/login)
-1. login with username: `testjssummit` and password: `password`
+1. login with username: `testjssummit@gmail.com` and password: `password`
 1. has a check that login was successful
 
 ## WebdriverIO
