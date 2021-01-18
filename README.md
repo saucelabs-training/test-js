@@ -17,6 +17,7 @@ In this workshop we will take a look at the JavaScript framework landscape for a
 - Knowledge of JavaScript
 - Node 14 LTS installed
 - Your preferred IDE installed
+- Docker
 
 ## Agenda
 
