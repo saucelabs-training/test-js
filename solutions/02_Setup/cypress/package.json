@@ -1,0 +1,15 @@
+{
+  "name": "solution-02_setup-cypress",
+  "version": "0.0.0",
+  "description": "Solution for 2nd chapter with Cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx saucectl run"
+  },
+  "keywords": [],
+  "author": "Christian Bromann <christian@saucelabs.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "saucectl": "^0.23.2"
+  }
+}
