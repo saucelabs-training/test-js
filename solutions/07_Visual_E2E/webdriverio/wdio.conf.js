@@ -2,29 +2,21 @@ const sauceOptions = {
     username: process.env.SAUCE_USERNAME,
     accesskey: process.env.SAUCE_ACCESS_KEY
 };
+
 const visualOptions = {
     apiKey: process.env.SCREENER_API_KEY,
     projectName: 'React Redux',
     scrollAndStitchScreenshots: true
 };
 
+// ====================
+// More information about the configuration is found here https://webdriver.io/docs/configurationfile.html
+// ====================
 exports.config = {
-    // ====================
-    // More information about the configuration is found here https://webdriver.io/docs/configurationfile.html
-    // ====================
-    runner: 'local',
-    specs: [
-        './test/**/*.spec.js'
-    ],
-    maxInstances: 100,
-    logLevel: 'error',
-    bail: 0,
+    specs: ['./test/**/*.spec.js'],
+    logLevel: 'verbose',
     baseUrl: 'https://www.saucedemo.com/',
-    waitforTimeout: 10000,
-    connectionRetryTimeout: 90000,
-    connectionRetryCount: 3,
     reporters: ['spec'],
-    services: [],
 
     //Screener Configuration
     hostname: 'hub.screener.io',
@@ -32,6 +24,7 @@ exports.config = {
     protocol: 'https',
     path: '/wd/hub',
     region: process.env.REGION || 'us',
+
     //Desktop A 28%: https://www.w3schools.com/browsers/browsers_display.asp
     //Desktop B 20%: https://www.w3schools.com/browsers/browsers_display.asp
     //iphone X
