@@ -1,6 +1,11 @@
 
-name: CI/CD Integration - Puppeteer
+name: CI/CD Integration - Testcafe
 on: [push, pull_request]
+
+env:
+  SAUCE_USERNAME: ${{secrets.SAUCE_USERNAME}}
+  SAUCE_ACCESS_KEY: ${{secrets.SAUCE_ACCESS_KEY}}
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -12,7 +17,7 @@ jobs:
         node-version: 14.x
     - name: Install dependencies and run
       run: |
-        cd ./solutions/02_Setup/puppeteer
+        cd ./solutions/02_Setup/testcafe
         npm i
         npx saucectl run
       env:

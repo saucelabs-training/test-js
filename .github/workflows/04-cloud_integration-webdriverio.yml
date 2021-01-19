@@ -1,6 +1,11 @@
 
 name: CI/CD Integration - WebdriverIO
 on: [push, pull_request]
+
+env:
+  SAUCE_USERNAME: ${{secrets.SAUCE_USERNAME}}
+  SAUCE_ACCESS_KEY: ${{secrets.SAUCE_ACCESS_KEY}}
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -10,11 +15,11 @@ jobs:
     - uses: ianwalter/puppeteer-container@v4.0.0
     - name: Run
       run: |
-        cd ./solutions/02_Setup/webdriverio
+        cd ./solutions/04_Cloud_Integration/webdriverio
         npm install
         npm run test
     - uses: actions/upload-artifact@v1
       if: failure()
       with:
         name: logs
-        path: ./solutions/02_Setup/webdriverio/logs
+        path: ./solutions/04_Cloud_Integration/webdriverio/logs
