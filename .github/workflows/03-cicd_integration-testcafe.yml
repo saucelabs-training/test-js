@@ -1,5 +1,5 @@
 
-name: CI/CD Integration - Testcafe
+name: Testcafe
 on: [push, pull_request]
 jobs:
   test:

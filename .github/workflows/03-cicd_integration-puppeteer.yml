@@ -1,5 +1,5 @@
 
-name: CI/CD Integration - Puppeteer
+name: Puppeteer
 on: [push, pull_request]
 jobs:
   test:
