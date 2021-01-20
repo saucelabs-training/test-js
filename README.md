@@ -25,10 +25,11 @@ This workshop starts with a short introduction into the subject matter in form o
 
 1. Introduction to Browser Automation (15min)
 1. Setup (30min)
-1. CI/CD Integration (15min)
 1. Reporters (15min)
-1. Sauce Labs Integration (30min)
+1. Network Mocking (15min)
 1. Page Objects (30min)
+1. CI/CD Integration (15min)
+1. Sauce Labs Integration (30min)
 1. Visual E2E Testing (30min)
 
 ## Disclaimer
