@@ -1,6 +1,10 @@
 
-name: CI/CD Integration - Puppeteer
-on: [push, pull_request]
+name: Puppeteer
+on:
+  pull_request:
+  push:
+    branches:
+      - devx
 jobs:
   test:
     runs-on: ubuntu-latest
