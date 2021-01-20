@@ -39,51 +39,10 @@ jobs:
           env:
             BUILD_ID: ${{ github.run_id }}
             BUILD_ENV: GitHub Actions
-  playwright:
-    runs-on: ubuntu-latest
-    steps:
-        - name: Checkout
-          uses: actions/checkout@v2
-        - uses: actions/setup-node@v1
-          with:
-            node-version: 14.x
-        - name: Install dependencies and run
-          run: |
-            cd ./solutions/02_Setup/playwright
-            npm i
-            npx saucectl run --test-env sauce
-          env:
-            BUILD_ID: ${{ github.run_id }}
-            BUILD_ENV: GitHub Actions
-  puppeteer:
-    runs-on: ubuntu-latest
-    steps:
-        - name: Checkout
-          uses: actions/checkout@v2
-        - uses: actions/setup-node@v1
-          with:
-            node-version: 14.x
-        - name: Install dependencies and run
-          run: |
-            cd ./solutions/02_Setup/puppeteer
-            npm i
-            npx saucectl run --test-env sauce
-          env:
-            BUILD_ID: ${{ github.run_id }}
-            BUILD_ENV: GitHub Actions
-  testcafe:
-    runs-on: ubuntu-latest
-    steps:
-        - name: Checkout
-          uses: actions/checkout@v2
-        - uses: actions/setup-node@v1
-          with:
-            node-version: 14.x
-        - name: Install dependencies and run
-          run: |
-            cd ./solutions/02_Setup/testcafe
-            npm i
-            npx saucectl run --test-env sauce
-          env:
-            BUILD_ID: ${{ github.run_id }}
-            BUILD_ENV: GitHub Actions
+  #Similar set up for all the other frameworks
+  # playwright:
+  #       - name: Install dependencies and run
+  #         run: |
+  #           cd ./solutions/02_Setup/playwright
+  #           npm i
+  #           npx saucectl run --test-env sauce
