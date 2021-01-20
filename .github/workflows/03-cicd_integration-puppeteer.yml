@@ -1,6 +1,7 @@
 
-name: CI/CD Integration - Puppeteer
+name: Puppeteer
 on: [push, pull_request]
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -14,7 +15,7 @@ jobs:
           run: |
             cd ./solutions/02_Setup/puppeteer
             npm i
-            npx saucectl run
+            npx saucectl run --test-env docker
           env:
             BUILD_ID: ${{ github.run_id }}
             BUILD_ENV: GitHub Actions

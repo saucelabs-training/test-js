@@ -1,0 +1,48 @@
+
+name: CICD In The Cloud
+# Triggers the workflow on push or pull request events
+on: [push, pull_request]
+# Sets environment variable values for the workflow
+env:
+  SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
+  SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY }}
+jobs:
+  webdriverio:
+    runs-on: ubuntu-latest
+    steps:
+        - name: Checkout
+          uses: actions/checkout@v2
+        - uses: ianwalter/puppeteer-container@v4.0.0
+        - name: Run
+          run: |
+            cd ./solutions/02_Setup/webdriverio
+            npm install
+            npm run test
+        - uses: actions/upload-artifact@v1
+          if: failure()
+          with:
+            name: logs
+            path: ./solutions/02_Setup/webdriverio/logs
+  cypress:
+    runs-on: ubuntu-latest
+    steps:
+        - name: Checkout
+          uses: actions/checkout@v2
+        - uses: actions/setup-node@v1
+          with:
+            node-version: 14.x
+        - name: Install dependencies and run
+          run: |
+            cd ./solutions/02_Setup/cypress
+            npm i
+            npx saucectl run --test-env sauce
+          env:
+            BUILD_ID: ${{ github.run_id }}
+            BUILD_ENV: GitHub Actions
+  #Similar set up for all the other frameworks
+  # playwright:
+  #       - name: Install dependencies and run
+  #         run: |
+  #           cd ./solutions/02_Setup/playwright
+  #           npm i
+  #           npx saucectl run --test-env sauce
