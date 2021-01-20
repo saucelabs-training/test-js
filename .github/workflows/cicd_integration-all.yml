@@ -1,6 +1,8 @@
 
 name: CICD In The Cloud
+# Triggers the workflow on push or pull request events
 on: [push, pull_request]
+# Sets environment variable values for the workflow
 env:
   SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
   SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY }}

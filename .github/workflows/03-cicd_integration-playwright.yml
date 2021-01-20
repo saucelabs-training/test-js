@@ -1,9 +1,7 @@
 
 name: Playwright
 on: [push, pull_request]
-env:
-  SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
-  SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY }}
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -17,7 +15,7 @@ jobs:
           run: |
             cd ./solutions/02_Setup/playwright
             npm i
-            npx saucectl run --test-env sauce
+            npx saucectl run --test-env docker
           env:
             BUILD_ID: ${{ github.run_id }}
             BUILD_ENV: GitHub Actions
