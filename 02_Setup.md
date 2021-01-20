@@ -106,7 +106,7 @@ $ npx wdio wdio.conf.js
 
 Uh oh!? There is an error in the test. Can you spot and fix it? Update your test to fulfill the requirements mentioned in the beginning of the chapter.
 
-## Puppeteer, Playwright or Testcafe
+## Cypress, Puppeteer, Playwright or Testcafe
 
 If you decide to run tests with Puppeteer, Playwright or Testcafe we recommend to use Sauce Labs Testrunner Toolkit to get up and running quickly. Here you can either All you need is:
 
