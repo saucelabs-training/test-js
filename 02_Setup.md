@@ -108,6 +108,8 @@ Uh oh!? There is an error in the test. Can you spot and fix it? Update your test
 
 ## Cypress, Puppeteer, Playwright or Testcafe
 
+> Note: This section is based on Sauce Testrunner Toolkit which is currently in Beta. You will learn how it works and what's coming. Afterwards, we will focus on implementing the rest of the workshop with WebdriverIO.
+
 If you decide to run tests with Puppeteer, Playwright or Testcafe we recommend to use Sauce Labs Testrunner Toolkit to get up and running quickly. Here you can either All you need is:
 
 ```bash
