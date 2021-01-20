@@ -127,7 +127,7 @@ $ saucectl new
 Then pick the framework. The toolkit will set up all necessary files. Afterwards you can go ahead a do a trial run via:
 
 ```bash
-$ SAUCE_USERNAME=<your-username> SAUCE_ACCESS_KEY=<your key> saucectl run
+$ saucectl run -c ./.sauce/config.yml
 ```
 
 > Note: if you don't have a Sauce Labs account yet, create one for free via `$ saucectl configure`
