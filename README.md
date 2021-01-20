@@ -25,8 +25,8 @@ This workshop starts with a short introduction into the subject matter in form o
 
 1. Introduction to Browser Automation (15min)
 1. Setup (30min)
-1. Using Reporters and Services (10min)
-1. Custom Reporters and Services (10min)
+1. Add Reporters (10min)
+1. Create Custom Reporters and Services (10min)
 1. Network Mocking (15min)
 1. CI/CD Integration (15min)
 1. Sauce Labs Integration (30min)
