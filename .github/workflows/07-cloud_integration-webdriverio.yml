@@ -1,0 +1,25 @@
+
+name: Cloud Integration - WebdriverIO
+on: [push, pull_request]
+
+env:
+  SAUCE_USERNAME: ${{secrets.SAUCE_USERNAME}}
+  SAUCE_ACCESS_KEY: ${{secrets.SAUCE_ACCESS_KEY}}
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - uses: ianwalter/puppeteer-container@v4.0.0
+    - name: Run
+      run: |
+        cd ./solutions/04_Cloud_Integration/webdriverio
+        npm install
+        npm run test
+    - uses: actions/upload-artifact@v1
+      if: failure()
+      with:
+        name: logs
+        path: ./solutions/04_Cloud_Integration/webdriverio/logs

@@ -1,0 +1,20 @@
+
+name: CI/CD Integration - Puppeteer
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+      with:
+        node-version: 14.x
+    - name: Install dependencies and run
+      run: |
+        cd ./solutions/02_Setup/puppeteer
+        npm i
+        npx saucectl run
+      env:
+        BUILD_ID: ${{ github.run_id }}
+        BUILD_ENV: GitHub Actions
