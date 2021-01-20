@@ -10,7 +10,7 @@ jobs:
     - uses: ianwalter/puppeteer-container@v4.0.0
     - name: Run
       run: |
-        cd ./solutions/02_Setup/webdriverio
+        cd ./solutions/06_CICD_Integration/webdriverio
         npm install
         npm run test
     - uses: actions/upload-artifact@v1
