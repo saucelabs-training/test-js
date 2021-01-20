@@ -1,5 +1,5 @@
 
-name: CI/CD Integration - WebdriverIO
+name: Cloud Integration - WebdriverIO
 on: [push, pull_request]
 
 env:

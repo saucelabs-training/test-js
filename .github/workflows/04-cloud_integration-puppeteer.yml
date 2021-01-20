@@ -1,5 +1,5 @@
 
-name: CI/CD Integration - Puppeteer
+name: Cloud Integration - Puppeteer
 on: [push, pull_request]
 
 env:
