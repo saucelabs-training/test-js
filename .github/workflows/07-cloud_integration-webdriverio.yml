@@ -18,8 +18,3 @@ jobs:
         cd ./solutions/04_Cloud_Integration/webdriverio
         npm install
         npm run test
-    - uses: actions/upload-artifact@v1
-      if: failure()
-      with:
-        name: logs
-        path: ./solutions/04_Cloud_Integration/webdriverio/logs
