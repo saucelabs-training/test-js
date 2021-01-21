@@ -1,6 +1,6 @@
 # Visual E2E Testing
 
-1. Configure your capabilities to look like this:
+1. Configure your `wdio.conf.js` `capabilities` to look like this:
 
 ```js
 
@@ -74,18 +74,18 @@ Note: your initial visual test will fail, and results will be labelled as "New";
 To add 4 more browser configurations to support the most popular desktop and mobile resolutions.
 
 1. Add a capability for your visual test to run on the 2nd most popular desktop:
-viewportSize: '1920x1080'
-browserName: 'chrome'
+* viewportSize: '1920x1080'
+* browserName: 'chrome'
 
 2. Add a capability for your visual test to run on iPhone X mobile browser:
-viewportSize: '375x812'
-browserName: 'safari'
-platformName: 'macOS 10.15'
+* viewportSize: '375x812'
+* browserName: 'safari'
+* platformName: 'macOS 10.15'
 
 3. Also, add iphone 6-8
-viewportSize: '414x736'
-browserName: 'safari'
-platformName: 'macOS 10.15'
+* viewportSize: '414x736'
+* browserName: 'safari'
+* platformName: 'macOS 10.15'
 
 4. And Galaxy S8
 viewportSize: '360x740'
