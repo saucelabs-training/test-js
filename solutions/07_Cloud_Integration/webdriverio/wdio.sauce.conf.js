@@ -7,9 +7,9 @@ exports.config = {
      */
     ...localConfig,
     /**
-     * user same tests from chapter 2
+     * use same tests from chapter 6
      */
-    specs: [path.join(__dirname, '..', '..', '02_Setup', 'webdriverio', 'tests', '**', '*.js')],
+    specs: [path.join(__dirname, '..', '..', '076_CICD_Integration', 'webdriverio', 'tests', '**', '*.js')],
     /**
      * set Sauce credentials
      */

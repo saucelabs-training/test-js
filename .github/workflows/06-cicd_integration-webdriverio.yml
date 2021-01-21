@@ -1,5 +1,5 @@
 
-name: 06 WebdriverIO
+name: WebdriverIO CI
 on: [push, pull_request]
 jobs:
   test:
@@ -8,13 +8,8 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - uses: ianwalter/puppeteer-container@v4.0.0
-    - name: Run
+    - name: Run Tests
       run: |
         cd ./solutions/06_CICD_Integration/webdriverio
         npm install
         npm run test
-    - uses: actions/upload-artifact@v1
-      if: failure()
-      with:
-        name: logs
-        path: ./solutions/02_Setup/webdriverio/logs

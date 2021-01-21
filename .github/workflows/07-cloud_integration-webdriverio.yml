@@ -1,5 +1,5 @@
 
-name: Cloud Integration - WebdriverIO
+name: WebdriverIO Cloud
 on: [push, pull_request]
 
 env:
@@ -13,8 +13,8 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - uses: ianwalter/puppeteer-container@v4.0.0
-    - name: Run
+    - name: Run Tests
       run: |
-        cd ./solutions/04_Cloud_Integration/webdriverio
+        cd ./solutions/07_Cloud_Integration/webdriverio
         npm install
         npm run test

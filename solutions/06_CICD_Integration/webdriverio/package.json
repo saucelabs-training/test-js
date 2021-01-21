@@ -1,7 +1,7 @@
 {
-  "name": "solution-02_setup-webdriverio",
+  "name": "solution-06_cicd-webdriverio",
   "version": "0.0.0",
-  "description": "Solution for 2nd chapter with WebdriverIO",
+  "description": "S",
   "main": "index.js",
   "scripts": {
     "test": "wdio"
