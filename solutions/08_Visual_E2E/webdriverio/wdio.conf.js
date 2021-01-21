@@ -14,7 +14,7 @@ const visualOptions = {
 // ====================
 exports.config = {
     specs: ['./test/**/*.spec.js'],
-    logLevel: 'verbose',
+    logLevel: 'trace',
     baseUrl: 'https://www.saucedemo.com/',
     reporters: ['spec'],
 
@@ -26,7 +26,7 @@ exports.config = {
     region: process.env.REGION || 'us',
 
     //Desktop A 28%: https://www.w3schools.com/browsers/browsers_display.asp
-    //Desktop B 20%: https://www.w3schools.com/browsers/browsers_display.asp
+    
     //iphone X
     //iphone 6-8
     //Galaxy S8+
@@ -42,6 +42,58 @@ exports.config = {
             'sauce:visual': {
                 ...visualOptions,
                 viewportSize: '1280x1024'
+            }
+        },
+        //Desktop B 20%: https://www.w3schools.com/browsers/browsers_display.asp
+        {
+            browserName: 'chrome',
+            platformName: 'windows 10',
+            browserVersion: 'latest',
+            'sauce:options': {
+                ...sauceOptions,
+            },
+            'sauce:visual': {
+                ...visualOptions,
+                viewportSize: '1920x1080'
+            }
+        },
+        //iphone X
+        {
+            browserName: 'safari',
+            platformName: 'macOS 10.15',
+            browserVersion: 'latest',
+            'sauce:options': {
+                ...sauceOptions,
+            },
+            'sauce:visual': {
+                ...visualOptions,
+                viewportSize: '375x812'
+            }
+        },
+        //iphone 6-8
+        {
+            browserName: 'safari',
+            platformName: 'macOS 10.15',
+            browserVersion: 'latest',
+            'sauce:options': {
+                ...sauceOptions,
+            },
+            'sauce:visual': {
+                ...visualOptions,
+                viewportSize: '414x736'
+            }
+        },
+        //Galaxy S8+
+        {
+            browserName: 'chrome',
+            platformName: 'windows 10',
+            browserVersion: 'latest',
+            'sauce:options': {
+                ...sauceOptions,
+            },
+            'sauce:visual': {
+                ...visualOptions,
+                viewportSize: '360x740'
             }
         }
     ]

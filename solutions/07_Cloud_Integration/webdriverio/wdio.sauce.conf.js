@@ -9,7 +9,7 @@ exports.config = {
     /**
      * use same tests from chapter 6
      */
-    specs: [path.join(__dirname, '..', '..', '076_CICD_Integration', 'webdriverio', 'tests', '**', '*.js')],
+    specs: [path.join(__dirname, '..', '..', '06_CICD_Integration', 'webdriverio', 'tests', '**', '*.js')],
     /**
      * set Sauce credentials
      */
@@ -18,7 +18,7 @@ exports.config = {
     /**
      * add @wdio/saucelabs-service
      */
-    services: ['sauce']
+    services: ['sauce'],
     /**
      * set more capabilities
      */

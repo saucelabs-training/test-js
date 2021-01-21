@@ -1,13 +1,13 @@
 {
-  "name": "solution-02_setup-webdriverio",
+  "name": "solution-07_cloud_integration",
   "version": "0.0.0",
-  "description": "Solution for 2nd chapter with WebdriverIO",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "wdio"
   },
   "keywords": [],
-  "author": "Christian Bromann <christian@saucelabs.com>",
+  "author": "Nikolay Advolodkin Github:nadvolod",
   "license": "MIT",
   "devDependencies": {
     "@wdio/cli": "^6.12.0",
