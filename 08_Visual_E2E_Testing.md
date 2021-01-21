@@ -90,3 +90,7 @@ To add 4 more browser configurations to support the most popular desktop and mob
 4. And Galaxy S8
 * viewportSize: '360x740'
 * browserName: 'chrome'
+
+## More Commands
+
+If you want to learn about ignoring elements, hiding elements, or focusing on certain elements, you can read the docs [here](https://screener.io/v2/docs/visual-e2e/visual-commands)
