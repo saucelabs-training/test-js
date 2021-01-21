@@ -1,6 +1,5 @@
 const BaseReporter = require('@wdio/reporter').default
 
-console.log(BaseReporter);
 module.exports = class CustomReporter extends BaseReporter {
     constructor(options) {
         /*
