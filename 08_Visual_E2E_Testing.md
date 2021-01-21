@@ -77,7 +77,7 @@ To add 4 more browser configurations to support the most popular desktop and mob
 * viewportSize: '1920x1080'
 * browserName: 'chrome'
 
-2. Add a capability for your visual test to run on iPhone X mobile browser:
+2. Add a capability for your visual test to run on iPhone X mobile browser
 * viewportSize: '375x812'
 * browserName: 'safari'
 * platformName: 'macOS 10.15'
@@ -88,5 +88,5 @@ To add 4 more browser configurations to support the most popular desktop and mob
 * platformName: 'macOS 10.15'
 
 4. And Galaxy S8
-viewportSize: '360x740'
-browserName: 'chrome'
+* viewportSize: '360x740'
+* browserName: 'chrome'
