@@ -17,7 +17,12 @@ exports.config = {
     logLevel: 'trace',
     baseUrl: 'https://www.saucedemo.com/',
     reporters: ['spec'],
-
+    waitforTimeout: 20000,
+    framework: 'mocha',
+    mochaOpts: {
+        ui: 'bdd',
+        timeout: 60000
+    },
     //Screener Configuration
     hostname: 'hub.screener.io',
     port: 443,
