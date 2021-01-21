@@ -1,0 +1,39 @@
+{
+    "articles": [
+        {
+            "author": {
+                "bio": null,
+                "following": false,
+                "image": "https://cdn4.iconfinder.com/data/icons/avatars-xmas-giveaway/128/batman_hero_avatar_comics-512.png",
+                "username": "testjssummit"
+            },
+            "body": "# This is a test\n\nThis doesn't hit the API but is a mocked request.",
+            "createdAt": "2021-01-21T13:36:46.634Z",
+            "description": "Network Mocking",
+            "favorited": false,
+            "favoritesCount": 0,
+            "slug": "my-awesome-article-vo72eo",
+            "tagList": [],
+            "title": "My awesome article",
+            "updatedAt": "2021-01-21T13:36:46.634Z"
+        },
+        {
+            "author": {
+                "bio": "I am a professional writer and entrepreneur, check me out!",
+                "following": true,
+                "image": "https://image.flaticon.com/icons/png/512/147/147144.png",
+                "username": "Max Mustermann"
+            },
+            "body": "# Hello World\n\nCheck me out!",
+            "createdAt": "2021-01-11T18:11:54.634Z",
+            "description": "Another awesome article",
+            "favorited": true,
+            "favoritesCount": 10230,
+            "slug": "another-awesome-article-volvo9",
+            "tagList": [],
+            "title": "Another awesome article",
+            "updatedAt": "2021-01-11T18:11:54.634Z"
+        }
+    ],
+    "articlesCount": 2
+}
