@@ -5,7 +5,7 @@ const sauceOptions = {
 
 const visualOptions = {
     apiKey: process.env.SCREENER_API_KEY,
-    projectName: 'React Redux',
+    projectName: 'TestJS 2021',
     scrollAndStitchScreenshots: true
 };
 
