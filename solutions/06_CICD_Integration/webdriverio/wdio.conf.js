@@ -60,56 +60,12 @@ exports.config = {
                 '--no-sandbox',
                 '--disable-infobars'
             ],
-        },
+        }
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
         // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
         // excludeDriverLogs: ['bugreport', 'server'],
     },
-    {
-        maxInstances: 1,
-        browserName: 'chrome',
-        acceptInsecureCerts: true,
-        'goog:chromeOptions': {
-            args: [
-                '--no-sandbox',
-                '--disable-infobars'
-            ],
-        },
-    },
-    {
-        maxInstances: 1,
-        browserName: 'chrome',
-        acceptInsecureCerts: true,
-        'goog:chromeOptions': {
-            args: [
-                '--no-sandbox',
-                '--disable-infobars'
-            ],
-        },
-    },
-    {
-        maxInstances: 1,
-        browserName: 'chrome',
-        acceptInsecureCerts: true,
-        'goog:chromeOptions': {
-            args: [
-                '--no-sandbox',
-                '--disable-infobars'
-            ],
-        },
-    },
-    {
-        maxInstances: 1,
-        browserName: 'chrome',
-        acceptInsecureCerts: true,
-        'goog:chromeOptions': {
-            args: [
-                '--no-sandbox',
-                '--disable-infobars'
-            ],
-        },
-    }
 ],
     //
     // ===================
