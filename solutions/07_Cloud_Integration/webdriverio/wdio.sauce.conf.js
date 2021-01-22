@@ -42,15 +42,44 @@ exports.config = {
         browserName: 'safari',
         browserVersion: 'latest-1',
         platformName: 'MacOS 10.15'
-    },  
+    },
+    //Test on iOS Mobile Web Emusim
     {
         build: build,
         appiumVersion: appiumVersion,
         browserName: 'Safari',
-        deviceName: 'iPhone XS Simulator',
-        deviceOrientation: 'portrait',
         platformVersion: '14.0',
-        platformName: 'iOS'
+        platformName: 'iOS',
+        deviceName: 'iPhone XS Simulator',
+    },
+    {
+        build: build,
+        appiumVersion: appiumVersion,
+        browserName: 'Safari',
+        platformVersion: '14.0',
+        platformName: 'iOS',
+        deviceName: 'iPhone X Simulator'
+    },
+    /**
+     * iOS Real Devices
+     */
+    {
+        name: 'Run on device description for iOS',
+        build,
+        platformName: 'iOS',
+        browserName: 'safari',
+        deviceName: 'iPhone XS'
+    },
+    /**
+     * Android Testing
+     */
+    //Test on Android Real Devices
+    {
+        name: "Run on device description for Android",
+        build,
+        browserName: 'chrome',
+        deviceName: 'Samsung Galaxy S10',
+        platformName: 'Android'
     },
     //Test on Android Web
     {
