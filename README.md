@@ -31,7 +31,8 @@ This workshop starts with a short introduction into the subject matter in form o
 1. CI/CD Integration (15min)
 1. Sauce Labs Integration (30min)
 1. Visual E2E Testing (30min)
-1. Page Objects (30min)
+1. Page Objects (Extra)
+1. Performance (Extra)
 
 ## Disclaimer
 All code and command examples assume that you are using a MacBook. Usually they should also work on a PowerShell on Windows. For anyone who has problems running certain things with Windows please create an issue or provide a PR (see below).
