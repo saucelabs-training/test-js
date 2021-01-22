@@ -10,7 +10,7 @@ In this workshop we will take a look at the JavaScript framework landscape for a
 
 - Understand the principles of browser automation
 - Learn to pick the right JavaScript framework for your project
-- Master various of common automation scenarios including network stubbing, visual and automated performance testing using traditional frameworks such as WebdriverIO or newer tools like Puppeteer, Playwright or Cypress
+- Master various of common automation scenarios including network stubbing, visual and automated performance testing using WebdriverIO
 
 ## Prerequisites
 
