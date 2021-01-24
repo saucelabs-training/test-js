@@ -1,5 +1,5 @@
 
-name: CICD In The Cloud
+name: CICD For All
 # Triggers the workflow on push or pull request events
 on: [push, pull_request]
 # Sets environment variable values for the workflow
@@ -41,7 +41,7 @@ jobs:
       uses: actions/checkout@v2
     - name: Run WebdriverIO Tests
       run: |
-        cd ./solutions/07_Visual_E2E/test
+        cd ./solutions/08_Visual_E2E/webdriverio
         npm install
         npm run test
   #Similar set up for all the other frameworks
