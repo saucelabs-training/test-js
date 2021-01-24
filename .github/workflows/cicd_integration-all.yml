@@ -11,8 +11,8 @@ jobs:
   webdriverio:
     runs-on: ubuntu-latest
     steps:
-        - name: Checkout
-          uses: actions/checkout@v2
+    - name: Checkout
+      uses: actions/checkout@v2
     - name: Run WebdriverIO Tests
       run: |
         cd ./solutions/07_Cloud_Integration/webdriverio
@@ -37,8 +37,8 @@ jobs:
   screener:
     runs-on: ubuntu-latest
     steps:
-        - name: Checkout
-          uses: actions/checkout@v2
+    - name: Checkout
+      uses: actions/checkout@v2
     - name: Run WebdriverIO Tests
       run: |
         cd ./solutions/07_Visual_E2E/test
