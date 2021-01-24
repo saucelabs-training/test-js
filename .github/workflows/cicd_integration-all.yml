@@ -6,23 +6,18 @@ on: [push, pull_request]
 env:
   SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
   SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY }}
+  SCREENER_API_KEY: ${{ secrets.SCREENER_API_KEY }}
 jobs:
   webdriverio:
     runs-on: ubuntu-latest
     steps:
         - name: Checkout
           uses: actions/checkout@v2
-        - uses: ianwalter/puppeteer-container@v4.0.0
-        - name: Run
-          run: |
-            cd ./solutions/02_Setup/webdriverio
-            npm install
-            npm run test
-        - uses: actions/upload-artifact@v1
-          if: failure()
-          with:
-            name: logs
-            path: ./solutions/02_Setup/webdriverio/logs
+    - name: Run WebdriverIO Tests
+      run: |
+        cd ./solutions/07_Cloud_Integration/webdriverio
+        npm install
+        npm run test
   cypress:
     runs-on: ubuntu-latest
     steps:
@@ -39,6 +34,16 @@ jobs:
           env:
             BUILD_ID: ${{ github.run_id }}
             BUILD_ENV: GitHub Actions
+  screener:
+    runs-on: ubuntu-latest
+    steps:
+        - name: Checkout
+          uses: actions/checkout@v2
+    - name: Run WebdriverIO Tests
+      run: |
+        cd ./solutions/07_Visual_E2E/test
+        npm install
+        npm run test
   #Similar set up for all the other frameworks
   # playwright:
   #       - name: Install dependencies and run
