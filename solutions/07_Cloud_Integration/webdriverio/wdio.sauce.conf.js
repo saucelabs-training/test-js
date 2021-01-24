@@ -9,6 +9,8 @@ exports.config = {
      * merge previous config
      */
     ...localConfig,
+    logLevel: 'error',
+    reporters: ['spec'],
     specs: ['./test/specs/**/*.js'],
     /**
      * set Sauce credentials
@@ -23,7 +25,7 @@ exports.config = {
      * set more capabilities
      */
     capabilities: [
-        {
+    {
         browserName: 'chrome',
         browserVersion: 'latest',
         platformName: 'Windows 10'
@@ -64,22 +66,62 @@ exports.config = {
      * iOS Real Devices
      */
     {
-        name: 'Run on device description for iOS',
-        build,
+        build: build,
         platformName: 'iOS',
         browserName: 'safari',
         deviceName: 'iPhone XS'
+    },
+    {
+        build: build,
+        platformName: 'iOS',
+        browserName: 'safari',
+        deviceName: 'iPhone X'
+    },
+    {
+        build: build,
+        platformName: 'iOS',
+        browserName: 'safari',
+        deviceName: 'iPhone 11 Pro Max'
+    },
+    {
+        build: build,
+        platformName: 'iOS',
+        browserName: 'safari',
+        deviceName: 'iPhone 12'
     },
     /**
      * Android Testing
      */
     //Test on Android Real Devices
     {
-        name: "Run on device description for Android",
-        build,
+        build: build,
         browserName: 'chrome',
+        platformName: 'Android',
         deviceName: 'Samsung Galaxy S10',
-        platformName: 'Android'
+    },
+    {
+        build: build,
+        browserName: 'chrome',
+        platformName: 'Android',
+        deviceName: 'Google Pixel 5',
+    },
+    {
+        build: build,
+        browserName: 'chrome',
+        platformName: 'Android',
+        deviceName: 'Google Pixel 4a',
+    },
+    {
+        build: build,
+        browserName: 'chrome',
+        platformName: 'Android',
+        deviceName: 'Google Pixel 4 XL',
+    },
+    {
+        build: build,
+        browserName: 'chrome',
+        platformName: 'Android',
+        deviceName: 'Google Pixel 4',
     },
     //Test on Android Web
     {
@@ -89,14 +131,5 @@ exports.config = {
         platformName: 'Android',
         platformVersion: '11.0',
         deviceName: 'Google Pixel 3 XL GoogleAPI Emulator'
-      },
-      {
-        build: build,
-        appiumVersion: appiumVersion,
-        browserName: 'Chrome',
-        platformName: 'Android',
-        platformVersion: '10.0',
-        deviceName: 'Android GoogleAPI Emulator',
-        appiumVersion: '1.18.1'
       }]
 }
