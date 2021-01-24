@@ -1,6 +1,10 @@
 # Cloud Integration
 
-The next step in our journey of a having a scaleable, robust and cross browser test suite is to run tests not only locally but also in the cloud to access more browser and platforms where our application can be run in. While it is fine to only develop tests in a single browser, if it comes to testing we should be interested covering the browser that are also used by our users.
+The next step in our journey of a having a scaleable and cross browser test suite is to run tests in the cloud. Advantages of cloud execution include:
+1. Ability to scale to run in parallel without needing extra hardware
+2. Ability to perform web and mobile testing
+3. Access to advanced debugging capabilities such as videos, screenshots, and logs (with no extra code 🎉)
+4. Access to extra analytics
 
 The objective of this chapter is to:
 
@@ -18,11 +22,4 @@ To run your session on Sauce Labs, Browerstack or Testingbot WebdriverIO only ne
 
 In addition to that WebdriverIO provides plugins that improve the integration with the vendor. Check out [`@wdio/sauce-service`](https://webdriver.io/docs/sauce-service.html), [`@wdio/browserstack-service`](https://webdriver.io/docs/browserstack-service.html) or [`@wdio/testingbot-service`](https://webdriver.io/docs/testingbot-service.html) for that.
 
-## Testcafe
-
-Testcafe comes with a [browser provider plugin](https://www.npmjs.com/package/testcafe-browser-provider-saucelabs) for [various cloud provider](https://www.npmjs.com/package/testcafe-browser-provider-browserstack) that allows you to run Testcafe jobs in their infrastructure. If you decided to use Testcafe
-
-## Others
-
-If you've decided to use any of the other frameworks with Sauce Labs testrunner toolkit (including Testcade) all you need to do to report tests in the cloud is to provide your username and access key as GitHub [repository secret](https://docs.github.com/en/actions/reference/encrypted-secrets) and populate it into the workflow job. It will be automatically picked up by the `saucectl` testrunner and ensures that your assets are stored in the cloud for debugging and data analysis later on.
 
