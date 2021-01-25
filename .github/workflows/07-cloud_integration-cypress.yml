@@ -1,5 +1,5 @@
 
-name: Cloud Integration - Cypress
+name: 07 Cloud Integration - Cypress
 on: [push, pull_request]
 
 env:

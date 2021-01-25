@@ -1,5 +1,5 @@
 
-name: WebdriverIO Cloud
+name: 07 WebdriverIO Cloud
 on: [push, pull_request]
 
 env:

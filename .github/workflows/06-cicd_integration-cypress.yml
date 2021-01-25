@@ -1,5 +1,5 @@
 
-name: Cypress
+name: 06 CI/CD Integration - Cypress
 on: [push, pull_request]
 jobs:
   test:

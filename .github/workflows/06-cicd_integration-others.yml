@@ -1,5 +1,5 @@
 
-name: Puppeteer,Playwright,Testcafe
+name: 06 CI/CD Integration - Puppeteer, Playwright, Testcafe
 on:
   pull_request:
   push:
