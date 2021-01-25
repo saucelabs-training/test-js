@@ -26,7 +26,8 @@ Configure Cloud Integration for your test automation.
 > Note, this will work with other cloud services as well
 2. To run your session on Sauce Labs, Browerstack or Testingbot WebdriverIO only needs to have [`user`](https://webdriver.io/docs/options.html#user) and [`key`](https://webdriver.io/docs/options.html#key) defined in your config. Other cloud vendors require also a specific [`protocol`](https://webdriver.io/docs/options.html#protocol), [`hostname`](https://webdriver.io/docs/options.html#hostname) and [`port`](https://webdriver.io/docs/options.html#port).
 
-Get your Username and Access Key in your Sauce account [here](https://app.saucelabs.com/user-settings).
+3. Get your Username and Access Key in your Sauce account [here](https://app.saucelabs.com/user-settings).
+
 4. Reference your username and accesskey in the conf.js
 ```js
     username: process.env.SAUCE_USERNAME,
@@ -48,5 +49,9 @@ Get your Username and Access Key in your Sauce account [here](https://app.saucel
     }
 ```
 8. Run the tests `cd webdriverio && npm test` 
+9. Login to saucelabs.com and check out the tests running 📱🎉
 
+#### Expand test coverage
+
+The power of using any cloud provider is that you have 1000s of browsers and mobile devices ondemand. So let's put these capabilities to use.
 
