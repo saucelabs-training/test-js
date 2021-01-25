@@ -1,5 +1,5 @@
 
-name: 06 CI/CD Integration - WebdriverIO
+name: 06 CI/CD WebdriverIO
 on: [push, pull_request]
 jobs:
   test:

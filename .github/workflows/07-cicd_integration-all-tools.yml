@@ -1,5 +1,5 @@
 
-name: CICD For All
+name: CICD For All Tools
 # Triggers the workflow on push or pull request events
 on: [push, pull_request]
 # Sets environment variable values for the workflow
