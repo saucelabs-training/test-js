@@ -1,10 +1,17 @@
 const { config: localConfig } = require('../../02_Setup/webdriverio/wdio.conf')
 const path = require('path');
+const buildName = `TestJS build-${(Date.now() / 1000).toFixed()}`;
+
+const appiumConfig = {
+    'sauce:config': {
+        build: buildName,
+        appiumVersion: '1.19.2'
+    }
+}
 
 const sauceConfig = {
     'sauce:config': {
-        build: `TestJS build-${(Date.now() / 1000).toFixed()}`,
-        appiumVersion: '1.19.2'
+        build: buildName
     }
 }
 
@@ -33,7 +40,8 @@ exports.config = {
     {
         browserName: 'chrome',
         browserVersion: 'latest',
-        platformName: 'Windows 10'
+        platformName: 'Windows 10',
+        ...sauceConfig
     },
     {
         browserName: 'chrome',
@@ -44,50 +52,38 @@ exports.config = {
         browserName: 'safari',
         browserVersion: 'latest',
         platformName: 'MacOS 10.15'
-    }]
+    },
     /**
      * iOS Real Devices
      */
-    // {
-    //     platformName: 'iOS',
-    //     browserName: 'safari',
-    //     deviceName: 'iPhone XS',
-    //     ...sauceConfig
-    // },
-    // {
-    //     platformName: 'iOS',
-    //     browserName: 'safari',
-    //     deviceName: 'iPhone X',
-    //     ...sauceConfig
-    // },
-    // {
-    //     platformName: 'iOS',
-    //     browserName: 'safari',
-    //     deviceName: 'iPhone 11 Pro Max',
-    //     ...sauceConfig
-    // },
-    // {
-    //     platformName: 'iOS',
-    //     browserName: 'safari',
-    //     deviceName: 'iPhone 12',
-    //     ...sauceConfig
-    // },
-    // /**
-    //  * Android Testing
-    //  */
-    // //Test on Android Real Devices
-    // {
-    //     browserName: 'chrome',
-    //     platformName: 'Android',
-    //     deviceName: 'Samsung Galaxy S10',
-    //     ...sauceConfig
-    // },
-    // {
-    //     browserName: 'chrome',
-    //     platformName: 'Android',
-    //     deviceName: 'Google Pixel 5',
-    //     ...sauceConfig
-    // },
+    {
+        platformName: 'iOS',
+        browserName: 'safari',
+        deviceName: 'iPhone XS',
+        ...appiumConfig
+    },
+    {
+        platformName: 'iOS',
+        browserName: 'safari',
+        deviceName: 'iPhone 11.*',
+        ...appiumConfig
+    },
+    /**
+     * Android Testing
+     */
+    //Test on Android Real Devices
+    {
+        browserName: 'chrome',
+        platformName: 'Android',
+        deviceName: 'Samsung Galaxy S.*',
+        ...appiumConfig
+    },
+    {
+        browserName: 'chrome',
+        platformName: 'Android',
+        deviceName: 'Google Pixel.*',
+        ...appiumConfig
+    }]
     // {
     //     browserName: 'chrome',
     //     platformName: 'Android',
