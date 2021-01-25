@@ -56,10 +56,12 @@ exports.config = {
         browserName: 'chrome',
         acceptInsecureCerts: true,
         'goog:chromeOptions': {
-            headless: true,
             args: [
                 '--no-sandbox',
-                '--disable-infobars'
+                '--disable-infobars',
+                '--headless',
+                '--disable-gpu', 
+                '--window-size=1440,735'
             ],
         }
         // If outputDir is provided WebdriverIO can capture driver session logs
