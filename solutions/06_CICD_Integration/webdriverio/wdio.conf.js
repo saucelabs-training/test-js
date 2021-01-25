@@ -56,6 +56,7 @@ exports.config = {
         browserName: 'chrome',
         acceptInsecureCerts: true,
         'goog:chromeOptions': {
+            headless: true,
             args: [
                 '--no-sandbox',
                 '--disable-infobars'
