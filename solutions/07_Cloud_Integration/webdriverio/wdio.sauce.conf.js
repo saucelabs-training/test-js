@@ -1,7 +1,12 @@
 const { config: localConfig } = require('../../02_Setup/webdriverio/wdio.conf')
 const path = require('path');
-const build = `TestJS build-${new Date().getTime()}`;
-const appiumVersion = '1.19.2';
+
+const sauceConfig = {
+    'sauce:config': {
+        build: `TestJS build-${(Date.now() / 1000).toFixed()}`,
+        appiumVersion: '1.19.2'
+    }
+}
 
 
 exports.config = {
@@ -28,108 +33,109 @@ exports.config = {
     {
         browserName: 'chrome',
         browserVersion: 'latest',
-        platformName: 'Windows 10'
+        platformName: 'Windows 10',
+        ...sauceConfig
     },
     {
         browserName: 'chrome',
         browserVersion: 'latest-1',
-        platformName: 'Windows 10'
+        platformName: 'Windows 10',
+        ...sauceConfig
     }, 
     {
         browserName: 'safari',
         browserVersion: 'latest',
-        platformName: 'MacOS 10.15'
+        platformName: 'MacOS 10.15',
+        ...sauceConfig
     },
     {
         browserName: 'safari',
         browserVersion: 'latest-1',
-        platformName: 'MacOS 10.15'
+        platformName: 'MacOS 10.15',
+        ...sauceConfig
     },
     //Test on iOS Mobile Web Emusim
     {
-        build: build,
-        appiumVersion: appiumVersion,
         browserName: 'Safari',
         platformVersion: '14.0',
         platformName: 'iOS',
         deviceName: 'iPhone XS Simulator',
+        ...sauceConfig
     },
     {
-        build: build,
-        appiumVersion: appiumVersion,
         browserName: 'Safari',
         platformVersion: '14.0',
         platformName: 'iOS',
-        deviceName: 'iPhone X Simulator'
+        deviceName: 'iPhone X Simulator',
+        ...sauceConfig
     },
     /**
      * iOS Real Devices
      */
     {
-        build: build,
         platformName: 'iOS',
         browserName: 'safari',
-        deviceName: 'iPhone XS'
+        deviceName: 'iPhone XS',
+        ...sauceConfig
     },
     {
-        build: build,
         platformName: 'iOS',
         browserName: 'safari',
-        deviceName: 'iPhone X'
+        deviceName: 'iPhone X',
+        ...sauceConfig
     },
     {
-        build: build,
         platformName: 'iOS',
         browserName: 'safari',
-        deviceName: 'iPhone 11 Pro Max'
+        deviceName: 'iPhone 11 Pro Max',
+        ...sauceConfig
     },
     {
-        build: build,
         platformName: 'iOS',
         browserName: 'safari',
-        deviceName: 'iPhone 12'
+        deviceName: 'iPhone 12',
+        ...sauceConfig
     },
     /**
      * Android Testing
      */
     //Test on Android Real Devices
     {
-        build: build,
         browserName: 'chrome',
         platformName: 'Android',
         deviceName: 'Samsung Galaxy S10',
+        ...sauceConfig
     },
     {
-        build: build,
         browserName: 'chrome',
         platformName: 'Android',
         deviceName: 'Google Pixel 5',
+        ...sauceConfig
     },
     {
-        build: build,
         browserName: 'chrome',
         platformName: 'Android',
         deviceName: 'Google Pixel 4a',
+        ...sauceConfig
     },
     {
-        build: build,
         browserName: 'chrome',
         platformName: 'Android',
         deviceName: 'Google Pixel 4 XL',
+        ...sauceConfig
     },
     {
-        build: build,
         browserName: 'chrome',
         platformName: 'Android',
         deviceName: 'Google Pixel 4',
+        ...sauceConfig
     },
     //Test on Android Web
     {
-        build: build,
-        appiumVersion: '1.18.1',
         browserName: 'Chrome',
         platformName: 'Android',
         platformVersion: '11.0',
-        deviceName: 'Google Pixel 3 XL GoogleAPI Emulator'
+        deviceName: 'Google Pixel 3 XL GoogleAPI Emulator',
+        ...sauceConfig
       }]
 }
