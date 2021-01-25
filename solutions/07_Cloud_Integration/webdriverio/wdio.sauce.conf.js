@@ -33,109 +33,77 @@ exports.config = {
     {
         browserName: 'chrome',
         browserVersion: 'latest',
-        platformName: 'Windows 10',
-        ...sauceConfig
+        platformName: 'Windows 10'
     },
     {
         browserName: 'chrome',
         browserVersion: 'latest-1',
-        platformName: 'Windows 10',
-        ...sauceConfig
+        platformName: 'Windows 10'
     }, 
     {
         browserName: 'safari',
         browserVersion: 'latest',
-        platformName: 'MacOS 10.15',
-        ...sauceConfig
-    },
-    {
-        browserName: 'safari',
-        browserVersion: 'latest-1',
-        platformName: 'MacOS 10.15',
-        ...sauceConfig
-    },
-    //Test on iOS Mobile Web Emusim
-    {
-        browserName: 'Safari',
-        platformVersion: '14.0',
-        platformName: 'iOS',
-        deviceName: 'iPhone XS Simulator',
-        ...sauceConfig
-    },
-    {
-        browserName: 'Safari',
-        platformVersion: '14.0',
-        platformName: 'iOS',
-        deviceName: 'iPhone X Simulator',
-        ...sauceConfig
-    },
+        platformName: 'MacOS 10.15'
+    }]
     /**
      * iOS Real Devices
      */
-    {
-        platformName: 'iOS',
-        browserName: 'safari',
-        deviceName: 'iPhone XS',
-        ...sauceConfig
-    },
-    {
-        platformName: 'iOS',
-        browserName: 'safari',
-        deviceName: 'iPhone X',
-        ...sauceConfig
-    },
-    {
-        platformName: 'iOS',
-        browserName: 'safari',
-        deviceName: 'iPhone 11 Pro Max',
-        ...sauceConfig
-    },
-    {
-        platformName: 'iOS',
-        browserName: 'safari',
-        deviceName: 'iPhone 12',
-        ...sauceConfig
-    },
-    /**
-     * Android Testing
-     */
-    //Test on Android Real Devices
-    {
-        browserName: 'chrome',
-        platformName: 'Android',
-        deviceName: 'Samsung Galaxy S10',
-        ...sauceConfig
-    },
-    {
-        browserName: 'chrome',
-        platformName: 'Android',
-        deviceName: 'Google Pixel 5',
-        ...sauceConfig
-    },
-    {
-        browserName: 'chrome',
-        platformName: 'Android',
-        deviceName: 'Google Pixel 4a',
-        ...sauceConfig
-    },
-    {
-        browserName: 'chrome',
-        platformName: 'Android',
-        deviceName: 'Google Pixel 4 XL',
-        ...sauceConfig
-    },
-    {
-        browserName: 'chrome',
-        platformName: 'Android',
-        deviceName: 'Google Pixel 4',
-        ...sauceConfig
-    },
-    //Test on Android Web
-    {
-        browserName: 'Chrome',
-        platformName: 'Android',
-        platformVersion: '11.0',
-        deviceName: 'Google Pixel 3 XL GoogleAPI Emulator',
-        ...sauceConfig
-      }]
+    // {
+    //     platformName: 'iOS',
+    //     browserName: 'safari',
+    //     deviceName: 'iPhone XS',
+    //     ...sauceConfig
+    // },
+    // {
+    //     platformName: 'iOS',
+    //     browserName: 'safari',
+    //     deviceName: 'iPhone X',
+    //     ...sauceConfig
+    // },
+    // {
+    //     platformName: 'iOS',
+    //     browserName: 'safari',
+    //     deviceName: 'iPhone 11 Pro Max',
+    //     ...sauceConfig
+    // },
+    // {
+    //     platformName: 'iOS',
+    //     browserName: 'safari',
+    //     deviceName: 'iPhone 12',
+    //     ...sauceConfig
+    // },
+    // /**
+    //  * Android Testing
+    //  */
+    // //Test on Android Real Devices
+    // {
+    //     browserName: 'chrome',
+    //     platformName: 'Android',
+    //     deviceName: 'Samsung Galaxy S10',
+    //     ...sauceConfig
+    // },
+    // {
+    //     browserName: 'chrome',
+    //     platformName: 'Android',
+    //     deviceName: 'Google Pixel 5',
+    //     ...sauceConfig
+    // },
+    // {
+    //     browserName: 'chrome',
+    //     platformName: 'Android',
+    //     deviceName: 'Google Pixel 4a',
+    //     ...sauceConfig
+    // },
+    // {
+    //     browserName: 'chrome',
+    //     platformName: 'Android',
+    //     deviceName: 'Google Pixel 4 XL',
+    //     ...sauceConfig
+    // },
+    // {
+    //     browserName: 'chrome',
+    //     platformName: 'Android',
+    //     deviceName: 'Google Pixel 4',
+    //     ...sauceConfig
+    // }]
 }
