@@ -1,5 +1,4 @@
 # Workshop: JS Functional Testing at Scale
-![07 WebdriverIO Cloud](https://github.com/saucelabs-training/test-js/workflows/07%20WebdriverIO%20Cloud/badge.svg)
 
 There are thousands of ways if not more to set up your automated testing environment. When it comes to stability and maintainability it is crucial to choose the right frameworks at the beginning of the journey. The ecosystem provides a variety of different tools that all rely on certain protocols and come with different levels of support for different use cases.
 
