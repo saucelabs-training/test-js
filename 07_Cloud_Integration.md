@@ -51,7 +51,28 @@ Configure Cloud Integration for your test automation.
 8. Run the tests `cd webdriverio && npm test` 
 9. Login to saucelabs.com and check out the tests running 📱🎉
 
-#### Expand test coverage
+#### Expand test coverage 🥇
 
 The power of using any cloud provider is that you have 1000s of browsers and mobile devices ondemand. So let's put these capabilities to use.
+
+We can configure our tests to run on Dektop Web and Mobile Web. Take a look at the [Platform Configurator](https://wiki.saucelabs.com/display/DOCS/Platform+Configurator#/) to create any configuration you like.
+
+Try to get the tests to run on Chrome with Windows 10, Safari on Mac, an Android Browser and iOS Browser. Below are some examples to help you out:
+
+```js
+    /**
+     * iOS Real Devices
+     */
+    {
+        platformName: 'iOS',
+        browserName: 'safari',
+        deviceName: 'iPhone XS',
+        ...appiumConfig
+    },
+        {
+        browserName: 'chrome',
+        browserVersion: 'latest',
+        platformName: 'Windows 10',
+        ...sauceConfig
+    },
 
