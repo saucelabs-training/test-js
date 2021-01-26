@@ -17,7 +17,7 @@ Follow along with Nikolay's live instructions to create your first CI Pipeline.
 
 We can do the same thing using Cypress. Create a brand new Workflow for Cypress. 
 
-The main difference is that you will navigate to a different directory and use a different command to run the tests. Here's a hint:
+The main difference is that you will navigate to a different directory and use a different command to run the tests. You won't need `ianwalter/puppeteer-container@4.0.0`. Here's a hint:
 
 ```yml
       run: |
