@@ -15,4 +15,13 @@ Follow along with Nikolay's live instructions to create your first CI Pipeline.
 
 ## Your Challenge
 
-We can do the same thing using Cypress. Create a brand 
+We can do the same thing using Cypress. Create a brand new Workflow for Cypress. 
+
+The main difference is that you will navigate to a different directory and use a different command to run the tests. Here's a hint:
+
+```yml
+      run: |
+        cd ./solutions/02_Setup/cypress
+        npm i
+        npx saucectl run
+```
