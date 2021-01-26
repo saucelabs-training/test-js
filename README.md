@@ -32,7 +32,7 @@ This workshop starts with a short introduction into the subject matter in form o
 1. CI/CD Integration (25min)
 1. Break (5min)
 1. Sauce Labs Integration (30min)
-1. Visual E2E Testing (20min)
+1. Visual E2E Testing (30min)
 1. Page Objects (Extra)
 1. Performance (Extra)
 
