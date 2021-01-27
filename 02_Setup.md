@@ -8,7 +8,7 @@ $ mkdir testjsworkshop
 $ cd testjsworkshop
 ```
 
-Then follow the chapter of the framework you would like to use. The objective of this chapter is to:
+The objective of this chapter is to:
 
 1. Have a simple test suite setup that runs a test to
 1. open [https://react-redux.realworld.io/#/login](https://react-redux.realworld.io/#/login)
