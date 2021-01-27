@@ -85,7 +85,7 @@ Hit enter without any selection as we want to add service integrations later on.
 
 > What is the base url?
 
-The base url contains the root url of the application that we want to test. In this case it is our example Vue.js application: `http://todomvc.com/examples/vue/`.
+The base url contains the root url of the application that we want to test. In this case it is our example Vue.js application: `https://react-redux.realworld.io/`.
 
 After all these questions your config file is created. Next try to solve the objectives mention at the top of this file. If you port the `test.js` code to an actual test, make sure you follow the [Mocha](https://mochajs.org/) conventions of writing test files. Simple setup would like this:
 
