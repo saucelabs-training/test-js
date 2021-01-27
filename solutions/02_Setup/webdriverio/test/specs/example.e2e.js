@@ -1,6 +1,6 @@
 describe('My Login application', () => {
     it('should login with valid credentials', () => {
-        browser.url('https://react-redux.realworld.io/#/login');
+        browser.url('/#/login');
 
         $('[type="email"]').setValue('testjssummit@gmail.com');
         $('[type="password"]').setValue('password');
