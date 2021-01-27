@@ -52,7 +52,8 @@ exports.config = {
     {
         browserName: 'safari',
         browserVersion: 'latest',
-        platformName: 'MacOS 10.15'
+        platformName: 'MacOS 10.15',
+        ...sauceConfig
     },
     /**
      * iOS Real Devices

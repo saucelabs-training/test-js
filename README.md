@@ -1,5 +1,4 @@
 # Workshop: JS Functional Testing at Scale
-![07 WebdriverIO Cloud](https://github.com/saucelabs-training/test-js/workflows/07%20WebdriverIO%20Cloud/badge.svg)
 
 There are thousands of ways if not more to set up your automated testing environment. When it comes to stability and maintainability it is crucial to choose the right frameworks at the beginning of the journey. The ecosystem provides a variety of different tools that all rely on certain protocols and come with different levels of support for different use cases.
 
@@ -27,9 +26,11 @@ This workshop starts with a short introduction into the subject matter in form o
 1. Introduction to Browser Automation (15min)
 1. Setup (30min)
 1. Add Reporters (10min)
+1. Break (5min)
 1. Create Custom Reporters and Services (10min)
 1. Network Mocking (15min)
-1. CI/CD Integration (15min)
+1. CI/CD Integration (25min)
+1. Break (5min)
 1. Sauce Labs Integration (30min)
 1. Visual E2E Testing (30min)
 1. Page Objects (Extra)

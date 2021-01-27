@@ -11,6 +11,17 @@ Depending on your framework choice please go ahead with the following instructio
 
 To run tests locally in a GitHub action we recommend to pick `ianwalter/puppeteer-container@4.0.0` which comes installed with all prerequisites you need to run Chrome in Docker. Based on that you can create a workflow that installs your project and kicks of your test.
 
-## Cypress, Puppeteer, Playwright or Testcafe
+Follow along with Nikolay's live instructions to create your first CI Pipeline.
 
-If you have picked one of these tools you can leverage from `saucectl`'s preconfigured Docker setup. All you need to do is run the same setup steps like in the last chapter.
+## Your Challenge
+
+Your challenge is to create a brand new Workflow for Cypress. Follow the same steps as before and create a brand new .yml with an appropriate name.
+
+The main difference is that you will navigate to a different directory and use a different command to run the tests. You won't need `ianwalter/puppeteer-container@4.0.0`. Here's a hint:
+
+```yml
+      run: |
+        cd ./solutions/02_Setup/cypress
+        npm i
+        npx saucectl run
+```
