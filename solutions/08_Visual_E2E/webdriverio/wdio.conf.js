@@ -30,11 +30,6 @@ exports.config = {
     path: '/wd/hub',
     region: process.env.REGION || 'us',
 
-    //Desktop A 28%: https://www.w3schools.com/browsers/browsers_display.asp
-    
-    //iphone X
-    //iphone 6-8
-    //Galaxy S8+
     capabilities: [    
         //Desktop A 28%: https://www.w3schools.com/browsers/browsers_display.asp
         {
