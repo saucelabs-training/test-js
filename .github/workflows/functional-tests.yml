@@ -16,12 +16,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node.js 14.x
-      uses: actions/setup-node@v1
-      with:
-        node-version: 14.x
     - uses: ianwalter/puppeteer-container@v4.0.0
-    - run: |
+    - name: Run functional tests
+      run: |
         cd ./solutions/06_CICD_Integration/webdriverio
         npm i
         npm run test
