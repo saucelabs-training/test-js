@@ -21,7 +21,7 @@ exports.config = {
      * merge previous config
      */
     ...localConfig,
-    logLevel: 'error',
+    logLevel: 'trace',
     reporters: ['spec'],
     specs: ['./test/specs/**/*.js'],
     /**
@@ -46,7 +46,8 @@ exports.config = {
     {
         browserName: 'chrome',
         browserVersion: 'latest-1',
-        platformName: 'Windows 10'
+        platformName: 'Windows 10',
+        ...sauceConfig
     }, 
     {
         browserName: 'safari',
@@ -84,22 +85,4 @@ exports.config = {
         deviceName: 'Google Pixel.*',
         ...appiumConfig
     }]
-    // {
-    //     browserName: 'chrome',
-    //     platformName: 'Android',
-    //     deviceName: 'Google Pixel 4a',
-    //     ...sauceConfig
-    // },
-    // {
-    //     browserName: 'chrome',
-    //     platformName: 'Android',
-    //     deviceName: 'Google Pixel 4 XL',
-    //     ...sauceConfig
-    // },
-    // {
-    //     browserName: 'chrome',
-    //     platformName: 'Android',
-    //     deviceName: 'Google Pixel 4',
-    //     ...sauceConfig
-    // }]
 }
