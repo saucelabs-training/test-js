@@ -1,5 +1,7 @@
 # Visual E2E Testing
 
+⚠️ Visual testing is not supported for free trial accounts. 
+
 1. Configure your `wdio.conf.js` `capabilities` to look like this:
 
 ```js
