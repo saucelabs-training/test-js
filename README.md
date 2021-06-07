@@ -4,7 +4,7 @@ There are thousands of ways if not more to set up your automated testing environ
 
 While there are the traditional WebDriver based JavaScript frameworks like Selenium or WebdriverIO, many new projects have popped up in recent years that provide even more capabilities, particularly for front-end developers.
 
-In this workshop we will take a look at the JavaScript framework landscape for automated functional testing, such as Puppeteer, Playright, Cypress, and others. We will explore what their differences are and how to choose the right tool for your project. Then, we will look at various scenarios, from basic functional test concepts to complex visual and frontend performance tests and complete the session with scaling up our solution using a cloud vendor like Sauce Labs.
+In this workshop we will take a look at the JavaScript framework landscape for automated functional testing, such as Puppeteer, Playwright, Cypress, and others. We will explore what their differences are and how to choose the right tool for your project. Then, we will look at various scenarios, from basic functional test concepts to complex visual and frontend performance tests and complete the session with scaling up our solution using a cloud vendor like Sauce Labs.
 
 ## Key Takeaways
 
